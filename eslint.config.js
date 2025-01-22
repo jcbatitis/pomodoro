@@ -5,6 +5,7 @@ const angular = require('angular-eslint');
 const unusedImports = require('eslint-plugin-unused-imports');
 
 const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
+const prettier = require('eslint-plugin-prettier');
 
 module.exports = tseslint.config(
   {
@@ -12,6 +13,7 @@ module.exports = tseslint.config(
     plugins: {
       // @ts-ignore
       'unused-imports': unusedImports,
+      prettier,
     },
     extends: [
       eslint.configs.recommended,
